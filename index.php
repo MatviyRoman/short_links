@@ -101,9 +101,9 @@ if ($id) {
 }
 
 if ($ajax && $url) {
-    if (!filter_var(gethostbyname($url), FILTER_VALIDATE_IP)) {
-        exit("https://$url is not a valid URL");
-    }
+    // if (!filter_var(gethostbyname($url), FILTER_VALIDATE_IP)) {
+    //     exit("https://$url is not a valid URL");
+    // }
     ob_end_clean();
 
     $search = 'SELECT * FROM short_links WHERE link_hash = "' . $result . '" LIMIT 1';
